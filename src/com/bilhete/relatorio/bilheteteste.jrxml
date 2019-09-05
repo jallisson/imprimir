@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bilhete" language="groovy" pageWidth="226" pageHeight="552" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="6" bottomMargin="0" uuid="f9311d2c-de78-4832-9bc3-09b9fcd5926c">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CAMINHO_IMAGEM" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="origem" class="java.lang.String"/>
+	<field name="destino" class="java.lang.String"/>
+	<field name="data_viagem" class="java.lang.String"/>
+	<field name="hora_viagem" class="java.lang.String"/>
+	<field name="poltrona" class="java.lang.String"/>
+	<field name="tarifa" class="java.lang.String"/>
+	<field name="passageiro" class="java.lang.String"/>
+	<field name="documento" class="java.lang.String"/>
+	<field name="data_venda" class="java.lang.String"/>
+	<field name="hora_venda" class="java.lang.String"/>
+	<field name="num_sistema" class="java.lang.String"/>
+	<field name="icms" class="java.lang.String"/>
+	<field name="servico" class="java.lang.String"/>
+	<field name="plataforma" class="java.lang.String"/>
+	<field name="prefixo" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="linha" class="java.lang.String"/>
+	<field name="taxa" class="java.lang.String"/>
+	<field name="valorTotal" class="java.lang.String"/>
+	<field name="desconto" class="java.lang.String"/>
+	<field name="valorApagar" class="java.lang.String"/>
+	<field name="chaveAcesso" class="java.lang.String"/>
+	<field name="tipoBpe" class="java.lang.String"/>
+	<title>
+		<band height="504" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="102" width="54" height="10" uuid="d2f7d52c-c368-4793-823d-bcbfc8f613eb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{origem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="102" width="76" height="10" uuid="d018e7f7-db3e-49c0-b08b-87e9ce23a0bd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="115" width="54" height="10" uuid="cec7aa12-ccc4-4c69-843d-412c76692916"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_viagem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="115" width="55" height="10" uuid="eb8dd43e-dc3c-4a1d-8ea0-9b21197dc82b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora_viagem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="123" width="29" height="10" uuid="2fd80fe8-bd07-4596-8819-c3aab03ef782"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{poltrona}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="192" width="163" height="8" uuid="4cc9a5cb-b985-47cf-80c2-e0f6a2afc4f8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarifa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="314" width="149" height="8" uuid="0d96f389-882a-4287-adb9-8aecf28c491d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passageiro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="322" width="149" height="8" uuid="b3a5aefd-d51a-49cc-8b3e-8faf6f4749f0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="346" width="50" height="8" uuid="60f79b18-07a5-45c6-a516-4f57d3de1bac"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_venda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="346" width="32" height="8" uuid="dfced676-cc72-4724-a70a-587e50c6be88"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora_venda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="370" width="49" height="8" uuid="58cb5f30-af74-4678-8d9b-d2007fe4d726"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_sistema}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="478" width="42" height="8" uuid="fa63bf3d-bdec-404f-8fbd-d1dd45ec3e62"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{icms}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="216" height="14" uuid="cc3b8087-c1be-4c96-8ffe-944ce9d23bb9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ: 06.692.107/0011-04 GOIÂNIA IV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="9" width="142" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RUA 44 NÚMERO 399
+TERM. ROD. DE GOIÂNIA GUICHÊ L18
+GOIÂNIA - GO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="33" width="216" height="1" uuid="ced2c44a-1757-408e-a2ed-8645a02a8c2c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="38" width="216" height="10" uuid="43335e20-a46d-4f50-ad92-a8b53fdbb4bb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N. Senhora Aparecida Ltda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="46" width="163" height="19" uuid="30fea4a6-2c1b-45a9-a46b-6906563c5cd3"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Courier New" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CNPJ: 06.692.107/0011-04 IE: 106682377
+RUA 44 NÚMERO 399]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="62" width="152" height="18" uuid="a1d448ba-4785-4095-9d33-13f185627324"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Courier New" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[TERM. ROD. DE GOIÂNIA GUICHÊ L18
+GOIÂNIA - GO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="78" width="69" height="9" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Courier New" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SAC: 08008870874]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="86" width="220" height="12" uuid="5197e091-92ed-4de0-9d4c-6d03ea4405e5"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Documento Auxiliar do Bilhete de Passagem Eletrônico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="93" width="216" height="1" uuid="ef2eac35-ada1-4131-83d6-ab88ab64048a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="102" width="31" height="10" uuid="6fca0743-13d9-4f64-b4ce-62d4b12f8fe3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Origem:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="102" width="34" height="10" uuid="4448b202-a912-4eba-9add-7f787c273911"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Destino:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="115" width="23" height="10" uuid="e1cb9c87-9c94-4328-8285-28c3c09a9c21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="115" width="36" height="10" uuid="00586f66-36d2-4572-a680-20a988e1f9f9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Horario:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="123" width="43" height="10" uuid="7e8e81f2-7a2e-475f-91a9-29efaaf4818f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(Servico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="123" width="53" height="10" uuid="9e9cb526-d8c9-461a-9a3b-94d20a898717"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plataforma:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="142" width="24" height="8" uuid="27ee0e5a-6c87-4442-9871-0d0b6394ebd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="150" width="37" height="9" uuid="38c02c5a-7927-4cfb-a5f5-ffe36db28495"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Linha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="192" width="28" height="8" uuid="5210f8f7-11d4-4378-ac39-d539b90731dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tarifa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="200" width="28" height="8" uuid="811283ad-8d3b-474d-b800-5cba91e4b168"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Taxa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="208" width="45" height="8" uuid="1e7cd597-18f6-4c02-807e-d134a5ecfd69"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seguro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="224" width="29" height="8" uuid="c15bd50e-b29b-4bb2-a7a0-154e08f31e0b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Outros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="232" width="59" height="8" uuid="53793ae6-d908-4e30-9994-171ad3970e50"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Total R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="216" width="38" height="8" uuid="3c44d11a-4c1f-47d3-ba24-d1350e657fcb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pedagio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="240" width="62" height="8" uuid="05ffa89d-8d96-4197-aba4-c2eb7853672e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desconto R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="248" width="62" height="8" uuid="a03eedfb-3a58-4e04-ac79-9dcd27c81771"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor a Pagar R$]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="54" y="232" width="146" height="8" uuid="e9846c7d-1934-4aae-9ac2-debfc2389144"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="248" width="132" height="8" uuid="927816ce-c85c-4aa4-8508-3cbfd4956b5a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorApagar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="37" y="208" width="163" height="8" uuid="008cc791-5cc4-42ba-b2d4-f6a87542b617"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[0,00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="216" width="160" height="8" uuid="fd9bd8cd-6909-4420-920a-983257ca6c58"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[0,00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="224" width="163" height="8" uuid="647aed5a-0983-4446-887c-c702155fdbcb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[0,00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="260" width="95" height="8" uuid="3724ecfc-de7d-4551-973a-51099c227f7a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORMA PAGAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="260" width="60" height="8" uuid="2c716727-b050-4741-ab8e-7aa11b89c4f1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR PAGO R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="278" width="149" height="11" uuid="704ef0a2-a1f8-47ec-8ee4-7b0ff2c195df"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Consulte pela Chave de Acesso em]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="289" width="213" height="10" uuid="06742d68-ae00-405b-acd9-24786921dbb7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[https://dfe-portal.svrs.rs.gov/bpe/qrcode? ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="314" width="51" height="8" uuid="85a2cf01-6c17-47ae-8717-df56f62da4b8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Passageiro: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="322" width="43" height="8" uuid="428196ae-0594-4c70-913f-4ae24936c5c2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="346" width="40" height="8" uuid="f267304f-ce51-4bd8-89f0-469c39726963"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serie 003 ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="163" y="362" width="38" height="8" uuid="f2ef1f4a-1d0e-424c-afb7-71beb1db0278"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora_venda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="362" width="40" height="8" uuid="eb8bb3a1-aca4-4e3a-b74b-0da56aaee51a"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_venda}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="362" width="87" height="8" uuid="d73d472d-7ba0-47d8-ab7c-644d32ee2c43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de autorização:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="370" width="81" height="8" uuid="c48b57ef-8a13-4680-a04a-0b2dd667504b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero do Sistema]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="378" width="51" height="8" uuid="7f3e1987-5be8-4f4c-9765-9c6e1c242f06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de BPE: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="478" width="30" height="8" uuid="133230c1-11ee-432d-9492-993ad8ea9a5f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ICMS R$ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="478" width="105" height="8" uuid="b0778087-7f1f-447a-8d99-e89229322d27"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(18,00%)  OUTROS TRIBUTOS R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="486" width="146" height="8" uuid="5fab435e-0a0b-4bb9-809d-9cb79553f7b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(Lei Federal 12.741/2012)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="123" width="40" height="10" uuid="22cb12e1-20ae-4660-945f-faa7c3a6c8ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Poltrona:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="45" y="123" width="32" height="10" uuid="86a1d6b7-367e-43b2-bfce-2b2a2bcd9fdb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{servico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="123" width="35" height="10" uuid="0e71382c-2e0b-4cbb-a6b2-6490ca4078ee"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plataforma}+" )"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="142" width="35" height="8" uuid="887c3db3-d926-49f9-a852-fe216172be5e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prefixo: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="142" width="40" height="8" uuid="38909441-58a8-4de8-94e4-1f6b4c06c778"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prefixo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="142" width="73" height="8" uuid="04c65dde-77e4-4963-b41c-7007c2d8c1cd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="150" width="133" height="9" uuid="3800f053-91ba-4d0b-bd12-ebeb668454f9"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{linha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="200" width="163" height="8" uuid="aac557f2-6bd7-44ca-b46b-950c1ec3f9fd"/>
+				<textElement textAlignment="Right">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{taxa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="240" width="146" height="8" uuid="ddf92958-e695-43fa-94c2-a6e1983a2ca9"/>
+				<textElement textAlignment="Right">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desconto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="268" width="55" height="8" uuid="e5bb2ee1-5ff1-4ff7-816e-079ee4015626"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dinheiro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="44" y="268" width="156" height="8" uuid="1a0b773c-96da-44e6-80d8-e2755b98774d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorApagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="299" width="213" height="13" uuid="0e0d3980-38a6-4a33-8e5c-2967c19803a0"/>
+				<textElement>
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2119 0806 6921 0700 0124 6300 3000 0286 7812 6222 "+$F{chaveAcesso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="346" width="40" height="8" uuid="dcbbb723-69dc-46dd-8621-5015014f3cde"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bp-e n*]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="44" y="346" width="46" height="8" uuid="22fa024d-74af-40cf-94c9-5e5ea09bb584"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_sistema}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="378" width="76" height="8" uuid="c505e25c-0b7c-4709-953e-10f6612646e7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoBpe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="478" width="29" height="8" uuid="6cb960b4-1dd7-4158-8ff0-fef66b4270c9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{icms}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="99" y="116" width="3" height="8" uuid="e0962b6a-9e92-43b7-9b77-0987f01d2768"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[|]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="354" width="203" height="8" uuid="bf06df0b-0ca3-430c-bc78-d98a4cc2bfad"/>
+				<textElement>
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Protocolo de autorização: 321190"+$F{num_sistema}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="6" y="165" width="216" height="24" uuid="91266d8b-59f6-47ca-a757-471cdc6760a3"/>
+				<imageExpression><![CDATA[$P{CAMINHO_IMAGEM}]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape">
+				<reportElement x="54" y="388" width="134" height="87" uuid="9c58a9bd-c9a4-4c09-83ae-8237ba3ef775"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+	new com.google.zxing.qrcode.QRCodeWriter().encode(
+		"https://dfe-portal.svrs.rs.gov.br/BPE/Consulta",
+		com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
+			</image>
+		</band>
+	</title>
+</jasperReport>
