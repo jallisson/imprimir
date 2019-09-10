@@ -1,1 +1,1 @@
-Sistema em Java que importa um arquivo txt com os dados vindo do SRVP e imprime esses arquivos em uma impressora térmica
+Sistema em Java que importa um <b>arquivo</b> txt com os dados vindo do SRVP e imprime esses arquivos em uma impressora térmica
