@@ -133,7 +133,7 @@ public final class ExecutaImpressao {
     private void piscarIcone1() {
          //Check the SystemTray support
         if (!SystemTray.isSupported()) {
-            System.out.println("SystemTray is not supported");
+            System.out.println("Sistema de Impressão");
             return;
         }
         final PopupMenu popup = new PopupMenu();
@@ -339,6 +339,8 @@ public final class ExecutaImpressao {
            
             if (destination.toFile().exists()) {
                 executaTudo();
+                destination.toFile().delete();
+            }else{
                 destination.toFile().delete();
             }
             try {
