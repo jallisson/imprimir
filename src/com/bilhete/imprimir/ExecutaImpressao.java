@@ -90,6 +90,7 @@ public final class ExecutaImpressao {
     private String num_sistema;
     private String tipoBpe;
     private String icms;
+    private String tipoPagt;
     
     //TrayIconDemo t = new TrayIconDemo();
     //Impressora i = new Impressora();
@@ -207,6 +208,9 @@ public final class ExecutaImpressao {
                         tipoBpe = scanner.nextLine();
                         String pulo23 = scanner.nextLine();
                         icms = scanner.nextLine();
+                        String pulo24 = scanner.nextLine();
+                        tipoPagt = scanner.nextLine();
+                        
                         System.out.println(origem);
                         System.out.println(destino);
                         System.out.println(data_viagem);
@@ -230,6 +234,7 @@ public final class ExecutaImpressao {
                         System.out.println(num_sistema);
                         System.out.println(tipoBpe);
                         System.out.println(icms);
+                        System.out.println(tipoPagt);
                         //System.out.println(numero);
                         //JOptionPane.showMessageDialog(this, nota, "Linha", JOptionPane.INFORMATION_MESSAGE);
 
@@ -244,7 +249,7 @@ public final class ExecutaImpressao {
     // printRequestAttributeSet.add(MediaSizeName.ISO_A4); //setting page size
     printRequestAttributeSet.add(new Copies(1));
 
-    PrinterName printerName = new PrinterName("XP-80C", null); //gets printer 
+    PrinterName printerName = new PrinterName("MP-4200 TH", null); //gets printer 
 
     PrintServiceAttributeSet printServiceAttributeSet = new HashPrintServiceAttributeSet();
     printServiceAttributeSet.add(printerName);
@@ -322,6 +327,7 @@ public final class ExecutaImpressao {
         bilhete.setNum_sistema(num_sistema);
         bilhete.setTipoBpe(tipoBpe);
         bilhete.setIcms(icms);
+        bilhete.setTipoPagt(tipoPagt);
         lista.add(bilhete);
         return lista;
     }

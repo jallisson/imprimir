@@ -123,16 +123,16 @@
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 06.692.107/0011-04 GOIÂNIA IV]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24 CAMPESTRE]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="40" y="9" width="142" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[RUA 44 NÚMERO 399
-TERM. ROD. DE GOIÂNIA GUICHÊ L18
-GOIÂNIA - GO]]></text>
+				<text><![CDATA[AVENIDA BERNARDO SAYAO SN
+CENTRO - 65420000
+CAMPESTRE - MA]]></text>
 			</staticText>
 			<line>
 				<reportElement x="0" y="33" width="216" height="1" uuid="ced2c44a-1757-408e-a2ed-8645a02a8c2c"/>
@@ -152,16 +152,16 @@ GOIÂNIA - GO]]></text>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 06.692.107/0011-04 IE: 106682377
-RUA 44 NÚMERO 399]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24 IE: 121024946
+Rod. BR 010 Km 01 sn]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="35" y="62" width="152" height="18" uuid="a1d448ba-4785-4095-9d33-13f185627324"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[TERM. ROD. DE GOIÂNIA GUICHÊ L18
-GOIÂNIA - GO]]></text>
+				<text><![CDATA[Maranhão Novo
+Imperatriz - MA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="77" y="78" width="69" height="9" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
