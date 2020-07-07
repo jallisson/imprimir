@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bilhete" language="groovy" pageWidth="226" pageHeight="552" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="6" bottomMargin="0" uuid="f9311d2c-de78-4832-9bc3-09b9fcd5926c">
-	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.zoom" value="2.48368529223662"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="960"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="CAMINHO_IMAGEM" class="java.io.InputStream">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -124,16 +124,16 @@
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 04.358.816/0001-42 GARAGEM ]]></text>
+				<text><![CDATA[CNPJ: 69.405.975/0001-04 BURITICUPU MA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="9" width="142" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
+				<reportElement x="19" y="9" width="180" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[RUA BOM JESUS 279
-MARANHAO NOVO
-IMPERATRIZ - MA]]></text>
+				<text><![CDATA[AV DAVI  ALVES SILVA 472
+CENTRO - 65393000
+BURITICUPU - MA]]></text>
 			</staticText>
 			<line>
 				<reportElement x="0" y="33" width="216" height="1" uuid="ced2c44a-1757-408e-a2ed-8645a02a8c2c"/>
@@ -146,7 +146,7 @@ IMPERATRIZ - MA]]></text>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Viacao Aparecida]]></text>
+				<text><![CDATA[Viacao Acailandia]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="31" y="46" width="163" height="19" uuid="30fea4a6-2c1b-45a9-a46b-6906563c5cd3"/>
@@ -165,7 +165,7 @@ RUA BOM JESUS 279]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="70" width="69" height="22" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
+				<reportElement x="71" y="70" width="79" height="22" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
@@ -568,7 +568,7 @@ SAC: 9935230560]]></text>
 		com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="10" y="268" width="55" height="8" uuid="4f6cff41-8480-43a4-b7ac-9b4d13d8545e"/>
+				<reportElement x="10" y="268" width="92" height="8" uuid="4f6cff41-8480-43a4-b7ac-9b4d13d8545e"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>

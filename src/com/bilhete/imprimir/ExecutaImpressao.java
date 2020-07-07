@@ -91,7 +91,7 @@ public final class ExecutaImpressao {
     private String tipoBpe;
     private String icms;
     private String tipoPagt;
-    
+
     //TrayIconDemo t = new TrayIconDemo();
     //Impressora i = new Impressora();
 
@@ -105,7 +105,7 @@ public final class ExecutaImpressao {
     }
 
     public static void main(String[] args) {
-        // Use an appropriate Look and Feel 
+        // Use an appropriate Look and Feel
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
             //UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
@@ -126,13 +126,13 @@ public final class ExecutaImpressao {
         /* SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
-                
+
             }
         });*/
     }
 
     private void piscarIcone1() {
-         //Check the SystemTray support
+        //Check the SystemTray support
         if (!SystemTray.isSupported()) {
             System.out.println("Sistema de Impressão");
             return;
@@ -140,12 +140,12 @@ public final class ExecutaImpressao {
         final PopupMenu popup = new PopupMenu();
         TrayIcon trayIcon
                 = new TrayIcon(createImage("/com/bilhete/imagens/testImp.gif", "tray icon"));
-        
+
                
         
         final SystemTray tray = SystemTray.getSystemTray();
 
-         try {
+        try {
             tray.add(trayIcon);
         } catch (AWTException e) {
             System.out.println("TrayIcon could not be added.");
@@ -153,7 +153,7 @@ public final class ExecutaImpressao {
         }
 
         trayIcon.setImageAutoSize(true);
-        
+
     }
 
     private void lerArquivo4() throws FileNotFoundException {
@@ -210,7 +210,7 @@ public final class ExecutaImpressao {
                         icms = scanner.nextLine();
                         String pulo24 = scanner.nextLine();
                         tipoPagt = scanner.nextLine();
-                        
+
                         System.out.println(origem);
                         System.out.println(destino);
                         System.out.println(data_viagem);
@@ -242,27 +242,27 @@ public final class ExecutaImpressao {
                     }
                 }
     }
-    
+
     private void PrintReportToPrinter(JasperPrint jp) throws JRException {
-    // TODO Auto-generated method stub
-    PrintRequestAttributeSet printRequestAttributeSet = new HashPrintRequestAttributeSet();
-    // printRequestAttributeSet.add(MediaSizeName.ISO_A4); //setting page size
-    printRequestAttributeSet.add(new Copies(1));
+        // TODO Auto-generated method stub
+        PrintRequestAttributeSet printRequestAttributeSet = new HashPrintRequestAttributeSet();
+        // printRequestAttributeSet.add(MediaSizeName.ISO_A4); //setting page size
+        printRequestAttributeSet.add(new Copies(1));
 
-    PrinterName printerName = new PrinterName("MP-4200 TH", null); //gets printer 
+        PrinterName printerName = new PrinterName("XP-80C", null); //gets printer
 
-    PrintServiceAttributeSet printServiceAttributeSet = new HashPrintServiceAttributeSet();
-    printServiceAttributeSet.add(printerName);
+        PrintServiceAttributeSet printServiceAttributeSet = new HashPrintServiceAttributeSet();
+        printServiceAttributeSet.add(printerName);
 
-    JRPrintServiceExporter exporter = new JRPrintServiceExporter();
+        JRPrintServiceExporter exporter = new JRPrintServiceExporter();
 
-    exporter.setParameter(JRExporterParameter.JASPER_PRINT, jp);
-    exporter.setParameter(JRPrintServiceExporterParameter.PRINT_REQUEST_ATTRIBUTE_SET, printRequestAttributeSet);
-    exporter.setParameter(JRPrintServiceExporterParameter.PRINT_SERVICE_ATTRIBUTE_SET, printServiceAttributeSet);
-    exporter.setParameter(JRPrintServiceExporterParameter.DISPLAY_PAGE_DIALOG, Boolean.FALSE);
-    exporter.setParameter(JRPrintServiceExporterParameter.DISPLAY_PRINT_DIALOG, Boolean.FALSE);
-    exporter.exportReport();
-}
+        exporter.setParameter(JRExporterParameter.JASPER_PRINT, jp);
+        exporter.setParameter(JRPrintServiceExporterParameter.PRINT_REQUEST_ATTRIBUTE_SET, printRequestAttributeSet);
+        exporter.setParameter(JRPrintServiceExporterParameter.PRINT_SERVICE_ATTRIBUTE_SET, printServiceAttributeSet);
+        exporter.setParameter(JRPrintServiceExporterParameter.DISPLAY_PAGE_DIALOG, Boolean.FALSE);
+        exporter.setParameter(JRPrintServiceExporterParameter.DISPLAY_PRINT_DIALOG, Boolean.FALSE);
+        exporter.exportReport();
+    }
 
     public void ImprimirBilhete(java.util.List lista) {
 
@@ -287,11 +287,10 @@ public final class ExecutaImpressao {
             //*aparece o relatorio na tela
             //*JasperViewer.viewReport(impressao, false);
             //viewer.setVisible(true);
-            
+
             //manda direto pra impressora padrao
             //JasperPrintManager.printPage(impressao, 0, false);
             PrintReportToPrinter(impressao);//call method
-            
 
         } catch (JRException e) {
             e.printStackTrace();
@@ -342,22 +341,26 @@ public final class ExecutaImpressao {
                 }*/
 
         while (true) {
-           
+              
             if (destination.toFile().exists()) {
                 executaTudo();
+                limpaVariaveis();
                 destination.toFile().delete();
-            }else{
+            } else {
                 destination.toFile().delete();
+                limpaVariaveis();
             }
+            
+            
             try {
                 new Thread().sleep(2000);
-               
+
 
             } catch (InterruptedException ex) {
                 Logger.getLogger(ExecutaImpressao.class.getName()).log(Level.SEVERE, null, ex);
             }
 
-          //  i = 0;
+            //  i = 0;
 
         }
 
@@ -375,7 +378,7 @@ public final class ExecutaImpressao {
             JOptionPane.showMessageDialog(null, ex, "Erro Leitura do txt", JOptionPane.INFORMATION_MESSAGE);
         }
     }
-    
+
     //é usado é para criar menuItem não funciona com repetição
     
     private void createAndShowGUI() {
@@ -501,7 +504,7 @@ public final class ExecutaImpressao {
         });
 
     }
-    
+
     //Obtain the image URL
     protected static Image createImage(String path, String description) {
         URL imageURL = ExecutaImpressao.class.getResource(path);
@@ -514,5 +517,31 @@ public final class ExecutaImpressao {
         }
     }
 
-   
+    private void limpaVariaveis() {
+        origem = null;
+        destino = null;
+        data_viagem = null;
+        hora_viagem = null;
+        servico = null;
+        poltrona = null;
+        plataforma = null;
+        prefixo = null;
+        tipo = null;
+        linha = null;
+        tarifa = null;
+        taxa = null;
+        valorTotal = null;
+        desconto = null;
+        valorApagar = null;
+        chaveAcesso = null;
+        passageiro = null;
+        documento = null;
+        data_venda = null;
+        hora_venda = null;
+        num_sistema = null;
+        tipoBpe = null;
+        icms = null;
+        tipoPagt = null;
+    }
+
 }
