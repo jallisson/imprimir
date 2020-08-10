@@ -91,6 +91,7 @@ public final class ExecutaImpressao {
     private String tipoBpe;
     private String icms;
     private String tipoPagt;
+    private String empresa;
 
     //TrayIconDemo t = new TrayIconDemo();
     //Impressora i = new Impressora();
@@ -210,6 +211,8 @@ public final class ExecutaImpressao {
                         icms = scanner.nextLine();
                         String pulo24 = scanner.nextLine();
                         tipoPagt = scanner.nextLine();
+                        String pulo25 = scanner.nextLine();
+                        empresa = scanner.nextLine();
 
                         System.out.println(origem);
                         System.out.println(destino);
@@ -235,6 +238,7 @@ public final class ExecutaImpressao {
                         System.out.println(tipoBpe);
                         System.out.println(icms);
                         System.out.println(tipoPagt);
+                        System.out.println(empresa);
                         //System.out.println(numero);
                         //JOptionPane.showMessageDialog(this, nota, "Linha", JOptionPane.INFORMATION_MESSAGE);
 
@@ -249,7 +253,7 @@ public final class ExecutaImpressao {
         // printRequestAttributeSet.add(MediaSizeName.ISO_A4); //setting page size
         printRequestAttributeSet.add(new Copies(1));
 
-        PrinterName printerName = new PrinterName("XP-80C", null); //gets printer
+        PrinterName printerName = new PrinterName("MP-4200 TH", null); //gets printer
 
         PrintServiceAttributeSet printServiceAttributeSet = new HashPrintServiceAttributeSet();
         printServiceAttributeSet.add(printerName);
@@ -327,6 +331,7 @@ public final class ExecutaImpressao {
         bilhete.setTipoBpe(tipoBpe);
         bilhete.setIcms(icms);
         bilhete.setTipoPagt(tipoPagt);
+        bilhete.setEmpresa(empresa);
         lista.add(bilhete);
         return lista;
     }
@@ -542,6 +547,7 @@ public final class ExecutaImpressao {
         tipoBpe = null;
         icms = null;
         tipoPagt = null;
+        empresa = null;
     }
 
 }

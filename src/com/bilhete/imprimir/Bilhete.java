@@ -38,6 +38,7 @@ public class Bilhete implements Serializable {
     private String tipoBpe;
     private String icms;
     private String tipoPagt;
+    private String empresa;
     
     
     public Bilhete() {
@@ -391,6 +392,20 @@ public class Bilhete implements Serializable {
      */
     public void setTipoPagt(String tipoPagt) {
         this.tipoPagt = tipoPagt;
+    }
+
+    /**
+     * @return the empresa
+     */
+    public String getEmpresa() {
+        return empresa;
+    }
+
+    /**
+     * @param empresa the empresa to set
+     */
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
     }
 
 }

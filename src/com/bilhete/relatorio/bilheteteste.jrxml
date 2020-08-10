@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bilhete" language="groovy" pageWidth="226" pageHeight="552" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="6" bottomMargin="0" uuid="f9311d2c-de78-4832-9bc3-09b9fcd5926c">
-	<property name="ireport.zoom" value="2.48368529223662"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.x" value="126"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="CAMINHO_IMAGEM" class="java.io.InputStream">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -33,6 +33,7 @@
 	<field name="chaveAcesso" class="java.lang.String"/>
 	<field name="tipoBpe" class="java.lang.String"/>
 	<field name="tipoPagt" class="java.lang.String"/>
+	<field name="empresa" class="java.lang.String"/>
 	<title>
 		<band height="504" splitType="Stretch">
 			<textField>
@@ -92,14 +93,14 @@
 				<textFieldExpression><![CDATA[$F{documento}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="133" y="346" width="50" height="8" uuid="60f79b18-07a5-45c6-a516-4f57d3de1bac"/>
+				<reportElement x="133" y="346" width="46" height="8" uuid="60f79b18-07a5-45c6-a516-4f57d3de1bac"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{data_venda}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="182" y="346" width="32" height="8" uuid="dfced676-cc72-4724-a70a-587e50c6be88"/>
+				<reportElement x="177" y="346" width="32" height="8" uuid="dfced676-cc72-4724-a70a-587e50c6be88"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
@@ -124,16 +125,16 @@
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 69.405.975/0001-04 BURITICUPU MA]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24 IMPERATRIZ - II ]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="19" y="9" width="180" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[AV DAVI  ALVES SILVA 472
-CENTRO - 65393000
-BURITICUPU - MA]]></text>
+				<text><![CDATA[AVENIDA TROPICAL SN
+JARDIM TROPICAL - 65905315
+IMPERATRIZ - MA]]></text>
 			</staticText>
 			<line>
 				<reportElement x="0" y="33" width="216" height="1" uuid="ced2c44a-1757-408e-a2ed-8645a02a8c2c"/>
@@ -142,35 +143,28 @@ BURITICUPU - MA]]></text>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement x="0" y="38" width="216" height="10" uuid="43335e20-a46d-4f50-ad92-a8b53fdbb4bb"/>
-				<textElement textAlignment="Center">
-					<font fontName="Courier New" size="7" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Viacao Acailandia]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="31" y="46" width="163" height="19" uuid="30fea4a6-2c1b-45a9-a46b-6906563c5cd3"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 04.358.816/0001-42 IE:123081513
-RUA BOM JESUS 279]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24  IE:121024946
+Rod. BR 010 Km 01 sn]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="77" y="62" width="66" height="13" uuid="a1d448ba-4785-4095-9d33-13f185627324"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[MARANHAO NOVO
+				<text><![CDATA[Maranhão Novo
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="71" y="70" width="79" height="22" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
+				<reportElement x="74" y="70" width="69" height="22" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[IMPERATRIZ - MA
-SAC: 9935230560]]></text>
+				<text><![CDATA[Imperatriz - MA
+SAC: 08008870874]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="-1" y="86" width="220" height="12" uuid="5197e091-92ed-4de0-9d4c-6d03ea4405e5"/>
@@ -382,14 +376,14 @@ SAC: 9935230560]]></text>
 				<text><![CDATA[Serie 003 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="362" width="38" height="8" uuid="f2ef1f4a-1d0e-424c-afb7-71beb1db0278"/>
+				<reportElement x="164" y="362" width="38" height="8" uuid="f2ef1f4a-1d0e-424c-afb7-71beb1db0278"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hora_venda}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="120" y="362" width="48" height="8" uuid="eb8bb3a1-aca4-4e3a-b74b-0da56aaee51a"/>
+				<reportElement x="120" y="362" width="49" height="8" uuid="eb8bb3a1-aca4-4e3a-b74b-0da56aaee51a"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
@@ -573,6 +567,13 @@ SAC: 9935230560]]></text>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tipoPagt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="38" width="216" height="10" uuid="990f148b-ea5f-46aa-bf33-4d2390f526a2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
