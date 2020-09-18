@@ -253,7 +253,7 @@ public final class ExecutaImpressao {
         // printRequestAttributeSet.add(MediaSizeName.ISO_A4); //setting page size
         printRequestAttributeSet.add(new Copies(1));
 
-        PrinterName printerName = new PrinterName("MP-4200 TH", null); //gets printer
+        PrinterName printerName = new PrinterName("POS-80", null); //gets printer
 
         PrintServiceAttributeSet printServiceAttributeSet = new HashPrintServiceAttributeSet();
         printServiceAttributeSet.add(printerName);
@@ -375,7 +375,13 @@ public final class ExecutaImpressao {
         try {
             lerArquivo4();
             java.util.List dados = registraBilhete();
-            ImprimirBilhete(dados);
+            //String testeorigem = origem;
+            //String testedestino = destino;
+            //String para;
+        
+            if( origem != null && !"".equals(origem) && destino != null && !"".equals(destino) && data_viagem != null && !"".equals(data_viagem) && hora_viagem != null && !"".equals(hora_viagem) &&  servico != null && !"".equals(servico) && poltrona != null && !"".equals(poltrona) && plataforma != null && !"".equals(plataforma) && prefixo != null && !"".equals(prefixo) && tipo != null && !"".equals(tipo) && linha != null && !"".equals(linha) && tarifa != null && !"".equals(tarifa) && taxa != null && !"".equals(taxa) && valorTotal != null && !"".equals(valorTotal) && desconto != null && !"".equals(desconto) && valorApagar != null && !"".equals(valorApagar) && chaveAcesso != null && !"".equals(chaveAcesso) && passageiro != null && !"".equals(passageiro) && documento != null && !"".equals(documento) && data_venda != null && !"".equals(data_venda) && hora_venda != null && !"".equals(hora_venda) && num_sistema != null && !"".equals(num_sistema) && tipoBpe != null && !"".equals(tipoBpe) && icms != null && !"".equals(icms) && tipoPagt != null && !"".equals(tipoPagt) && empresa != null && !"".equals(empresa))
+            //if(origem != null && !"".equals(origem) && destino != null && !"".equals(destino))  
+                ImprimirBilhete(dados);
             //excluiArquivo();
             //System.exit(0);
         } catch (FileNotFoundException ex) {

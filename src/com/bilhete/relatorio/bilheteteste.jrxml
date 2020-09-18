@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bilhete" language="groovy" pageWidth="226" pageHeight="552" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="6" bottomMargin="0" uuid="f9311d2c-de78-4832-9bc3-09b9fcd5926c">
-	<property name="ireport.zoom" value="4.0"/>
-	<property name="ireport.x" value="126"/>
+	<property name="ireport.zoom" value="3.6363636363636362"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="CAMINHO_IMAGEM" class="java.io.InputStream">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -125,15 +125,15 @@
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 06.692.107/0001-24 IMPERATRIZ - II ]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24 IMPERATRIZ-TERCEIRIZADA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="19" y="9" width="180" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
+				<reportElement x="0" y="9" width="210" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
 				<text><![CDATA[AVENIDA TROPICAL SN
-JARDIM TROPICAL - 65905315
+JARDIM TROPICAL SN - 65905315
 IMPERATRIZ - MA]]></text>
 			</staticText>
 			<line>
@@ -155,7 +155,7 @@ Rod. BR 010 Km 01 sn]]></text>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Maranhão Novo
+				<text><![CDATA[MARANHAO NOVO
 ]]></text>
 			</staticText>
 			<staticText>
@@ -163,7 +163,7 @@ Rod. BR 010 Km 01 sn]]></text>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Imperatriz - MA
+				<text><![CDATA[IMPERATRIZ - MA
 SAC: 08008870874]]></text>
 			</staticText>
 			<staticText>
@@ -569,8 +569,8 @@ SAC: 08008870874]]></text>
 				<textFieldExpression><![CDATA[$F{tipoPagt}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="38" width="216" height="10" uuid="990f148b-ea5f-46aa-bf33-4d2390f526a2"/>
-				<textElement textAlignment="Center">
+				<reportElement x="19" y="38" width="181" height="10" uuid="990f148b-ea5f-46aa-bf33-4d2390f526a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
