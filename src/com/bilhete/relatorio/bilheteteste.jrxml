@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bilhete" language="groovy" pageWidth="226" pageHeight="552" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="6" bottomMargin="0" uuid="f9311d2c-de78-4832-9bc3-09b9fcd5926c">
-	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.zoom" value="3.6363636363636362"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="960"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="CAMINHO_IMAGEM" class="java.io.InputStream">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -33,6 +33,7 @@
 	<field name="chaveAcesso" class="java.lang.String"/>
 	<field name="tipoBpe" class="java.lang.String"/>
 	<field name="tipoPagt" class="java.lang.String"/>
+	<field name="empresa" class="java.lang.String"/>
 	<title>
 		<band height="504" splitType="Stretch">
 			<textField>
@@ -92,14 +93,14 @@
 				<textFieldExpression><![CDATA[$F{documento}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="133" y="346" width="50" height="8" uuid="60f79b18-07a5-45c6-a516-4f57d3de1bac"/>
+				<reportElement x="133" y="346" width="46" height="8" uuid="60f79b18-07a5-45c6-a516-4f57d3de1bac"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{data_venda}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="182" y="346" width="32" height="8" uuid="dfced676-cc72-4724-a70a-587e50c6be88"/>
+				<reportElement x="177" y="346" width="32" height="8" uuid="dfced676-cc72-4724-a70a-587e50c6be88"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
@@ -124,15 +125,15 @@
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 04.358.816/0001-42 GARAGEM ]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24 IMPERATRIZ-TERCEIRIZADA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="9" width="142" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
+				<reportElement x="0" y="9" width="210" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[RUA BOM JESUS 279
-MARANHAO NOVO
+				<text><![CDATA[AVENIDA TROPICAL SN
+JARDIM TROPICAL SN - 65905315
 IMPERATRIZ - MA]]></text>
 			</staticText>
 			<line>
@@ -142,19 +143,12 @@ IMPERATRIZ - MA]]></text>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement x="0" y="38" width="216" height="10" uuid="43335e20-a46d-4f50-ad92-a8b53fdbb4bb"/>
-				<textElement textAlignment="Center">
-					<font fontName="Courier New" size="7" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Viacao Aparecida]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="31" y="46" width="163" height="19" uuid="30fea4a6-2c1b-45a9-a46b-6906563c5cd3"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 04.358.816/0001-42 IE:123081513
-RUA BOM JESUS 279]]></text>
+				<text><![CDATA[CNPJ: 06.692.107/0001-24  IE:121024946
+Rod. BR 010 Km 01 sn]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="77" y="62" width="66" height="13" uuid="a1d448ba-4785-4095-9d33-13f185627324"/>
@@ -165,12 +159,12 @@ RUA BOM JESUS 279]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="70" width="69" height="22" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
+				<reportElement x="74" y="70" width="69" height="22" uuid="cf44ce67-c95d-4c74-9c5f-718495adcf82"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
 				<text><![CDATA[IMPERATRIZ - MA
-SAC: 9935230560]]></text>
+SAC: 08008870874]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="-1" y="86" width="220" height="12" uuid="5197e091-92ed-4de0-9d4c-6d03ea4405e5"/>
@@ -382,14 +376,14 @@ SAC: 9935230560]]></text>
 				<text><![CDATA[Serie 003 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="362" width="38" height="8" uuid="f2ef1f4a-1d0e-424c-afb7-71beb1db0278"/>
+				<reportElement x="164" y="362" width="38" height="8" uuid="f2ef1f4a-1d0e-424c-afb7-71beb1db0278"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hora_venda}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="120" y="362" width="48" height="8" uuid="eb8bb3a1-aca4-4e3a-b74b-0da56aaee51a"/>
+				<reportElement x="120" y="362" width="49" height="8" uuid="eb8bb3a1-aca4-4e3a-b74b-0da56aaee51a"/>
 				<textElement>
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
@@ -568,11 +562,18 @@ SAC: 9935230560]]></text>
 		com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="10" y="268" width="55" height="8" uuid="4f6cff41-8480-43a4-b7ac-9b4d13d8545e"/>
+				<reportElement x="10" y="268" width="92" height="8" uuid="4f6cff41-8480-43a4-b7ac-9b4d13d8545e"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tipoPagt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="19" y="38" width="181" height="10" uuid="990f148b-ea5f-46aa-bf33-4d2390f526a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
