@@ -37,6 +37,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -154,6 +155,10 @@ public final class ExecutaImpressao {
 
         trayIcon.setImageAutoSize(true);
         
+    }
+    
+    private void executarBat() throws IOException{
+        Runtime.getRuntime().exec("rundll32 url.dll FileProtocolHandler " + "file:\\c:\\sip\\arquivos\\limpar.bat");
     }
 
     private void lerArquivo4() throws FileNotFoundException {
