@@ -253,7 +253,7 @@ public final class ExecutaImpressao {
         // printRequestAttributeSet.add(MediaSizeName.ISO_A4); //setting page size
         printRequestAttributeSet.add(new Copies(1));
 
-        PrinterName printerName = new PrinterName("POS-80", null); //gets printer
+        PrinterName printerName = new PrinterName("MP-4200 TH", null); //gets printer
 
         PrintServiceAttributeSet printServiceAttributeSet = new HashPrintServiceAttributeSet();
         printServiceAttributeSet.add(printerName);
