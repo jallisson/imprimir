@@ -96,7 +96,6 @@ public final class ExecutaImpressao {
 
     //TrayIconDemo t = new TrayIconDemo();
     //Impressora i = new Impressora();
-
     public ExecutaImpressao() {
         //createAndShowGUI();
         //executaTudo();
@@ -143,8 +142,6 @@ public final class ExecutaImpressao {
         TrayIcon trayIcon
                 = new TrayIcon(createImage("/com/bilhete/imagens/testImp.gif", "tray icon"));
 
-               
-        
         final SystemTray tray = SystemTray.getSystemTray();
 
         try {
@@ -157,8 +154,8 @@ public final class ExecutaImpressao {
         trayIcon.setImageAutoSize(true);
 
     }
-    
-    private void executarBat() throws IOException{
+
+    private void executarBat() throws IOException {
         Runtime.getRuntime().exec("rundll32 url.dll FileProtocolHandler " + "file:\\c:\\sip\\arquivos\\limpar.bat");
     }
 
@@ -289,18 +286,52 @@ public final class ExecutaImpressao {
             //*para funcionario abrir os relatorio dentro do pacote tem q configurar o parametros no ireport como InputScream
             InputStream caminhoImagemBrasao = getClass().getResourceAsStream("/com/bilhete/imagens/barra.jpeg");
             parametros.put("CAMINHO_IMAGEM", caminhoImagemBrasao);
+
             InputStream is = getClass().getResourceAsStream("/com/bilhete/relatorio/bilheteteste.jasper");
             impressao = JasperFillManager.fillReport(is, parametros, ds);
+            PrintReportToPrinter(impressao);//call method*/
+
             //impressao = JasperFillManager.fillReport(relJasper, parametros, ds);
             //JasperViewer viewer = new JasperViewer(impressao, true);
             //*aparece o relatorio na tela
             //*JasperViewer.viewReport(impressao, false);
             //viewer.setVisible(true);
-
             //manda direto pra impressora padrao
             //JasperPrintManager.printPage(impressao, 0, false);
-            PrintReportToPrinter(impressao);//call method
+        } catch (JRException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e, "Erro Ireport", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
 
+    public void ImprimirBilheteEmbarque(java.util.List lista) {
+
+        /*String caminhoRelJasper = "/com/bilhete/relatorio/bilheteteste.jasper";
+
+        InputStream relJasper = getClass().getResourceAsStream(caminhoRelJasper);*/
+        JRBeanCollectionDataSource ds = new JRBeanCollectionDataSource(lista);
+
+        Map parametros = new HashMap();
+        JasperPrint impressao = null;
+        //parametros.put("CAMINHO_IMAGEM", System.getProperty("user.dir") + "\\imagem\\logocidade.jpg");
+
+        try {
+            //parametros.put("CAMINHO_IMAGEM", System.getProperty("user.dir") + "\\imprimir\\barra.jpeg");
+            //*para funcionario abrir os relatorio dentro do pacote tem q configurar o parametros no ireport como InputScream
+            InputStream caminhoImagemBrasao = getClass().getResourceAsStream("/com/bilhete/imagens/barra.jpeg");
+            parametros.put("CAMINHO_IMAGEM", caminhoImagemBrasao);
+
+            InputStream is = getClass().getResourceAsStream("/com/bilhete/relatorio/bilheteembarque.jasper");
+            impressao = JasperFillManager.fillReport(is, parametros, ds);
+            PrintReportToPrinter(impressao);//call method*/
+
+            //impressao = JasperFillManager.fillReport(relJasper, parametros, ds);
+            //JasperViewer viewer = new JasperViewer(impressao, true);
+            //*aparece o relatorio na tela
+            //*JasperViewer.viewReport(impressao, false);
+            //viewer.setVisible(true);
+            //manda direto pra impressora padrao
+            //JasperPrintManager.printPage(impressao, 0, false);
         } catch (JRException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, e, "Erro Ireport", JOptionPane.INFORMATION_MESSAGE);
@@ -351,7 +382,7 @@ public final class ExecutaImpressao {
                 }*/
 
         while (true) {
-              
+
             if (destination.toFile().exists()) {
                 executaTudo();
                 limpaVariaveis();
@@ -360,18 +391,15 @@ public final class ExecutaImpressao {
                 destination.toFile().delete();
                 limpaVariaveis();
             }
-            
-            
+
             try {
                 new Thread().sleep(2000);
-
 
             } catch (InterruptedException ex) {
                 Logger.getLogger(ExecutaImpressao.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             //  i = 0;
-
         }
 
     }
@@ -383,10 +411,18 @@ public final class ExecutaImpressao {
             //String testeorigem = origem;
             //String testedestino = destino;
             //String para;
-        
-            if( origem != null && !"".equals(origem) && destino != null && !"".equals(destino) && data_viagem != null && !"".equals(data_viagem) && hora_viagem != null && !"".equals(hora_viagem) &&  servico != null && !"".equals(servico) && poltrona != null && !"".equals(poltrona) && plataforma != null && !"".equals(plataforma) && prefixo != null && !"".equals(prefixo) && tipo != null && !"".equals(tipo) && linha != null && !"".equals(linha) && tarifa != null && !"".equals(tarifa) && taxa != null && !"".equals(taxa) && valorTotal != null && !"".equals(valorTotal) && desconto != null && !"".equals(desconto) && valorApagar != null && !"".equals(valorApagar) && chaveAcesso != null && !"".equals(chaveAcesso) && passageiro != null && !"".equals(passageiro) && documento != null && !"".equals(documento) && data_venda != null && !"".equals(data_venda) && hora_venda != null && !"".equals(hora_venda) && num_sistema != null && !"".equals(num_sistema) && tipoBpe != null && !"".equals(tipoBpe) && icms != null && !"".equals(icms) && tipoPagt != null && !"".equals(tipoPagt) && empresa != null && !"".equals(empresa))
-            //if(origem != null && !"".equals(origem) && destino != null && !"".equals(destino))  
-                ImprimirBilhete(dados);
+            int qtde = 1;//se 2 imprime o embarque se for 1 não imprime o embarque
+
+            if (origem != null && !"".equals(origem) && destino != null && !"".equals(destino) && data_viagem != null && !"".equals(data_viagem) && hora_viagem != null && !"".equals(hora_viagem) && servico != null && !"".equals(servico) && poltrona != null && !"".equals(poltrona) && plataforma != null && !"".equals(plataforma) && prefixo != null && !"".equals(prefixo) && tipo != null && !"".equals(tipo) && linha != null && !"".equals(linha) && tarifa != null && !"".equals(tarifa) && taxa != null && !"".equals(taxa) && valorTotal != null && !"".equals(valorTotal) && desconto != null && !"".equals(desconto) && valorApagar != null && !"".equals(valorApagar) && chaveAcesso != null && !"".equals(chaveAcesso) && passageiro != null && !"".equals(passageiro) && documento != null && !"".equals(documento) && data_venda != null && !"".equals(data_venda) && hora_venda != null && !"".equals(hora_venda) && num_sistema != null && !"".equals(num_sistema) && tipoBpe != null && !"".equals(tipoBpe) && icms != null && !"".equals(icms) && tipoPagt != null && !"".equals(tipoPagt) && empresa != null && !"".equals(empresa)) //if(origem != null && !"".equals(origem) && destino != null && !"".equals(destino))  
+            {
+                if (qtde == 2) {
+                    ImprimirBilhete(dados);
+                    ImprimirBilheteEmbarque(dados);
+                }else if (qtde ==1){
+                    ImprimirBilhete(dados);
+                }
+            }
+
             //excluiArquivo();
             //System.exit(0);
         } catch (FileNotFoundException ex) {
@@ -396,7 +432,6 @@ public final class ExecutaImpressao {
     }
 
     //é usado é para criar menuItem não funciona com repetição
-    
     private void createAndShowGUI() {
 
         //Check the SystemTray support
