@@ -125,16 +125,16 @@
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 06.692.107/0001-24 IMPERATRIZ-TERCEIRIZADA]]></text>
+				<text><![CDATA[CNPJ: 07.450.785/0001-43 CANAA DOS CARAJAS PA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="9" width="210" height="30" uuid="a052d18e-88fc-4809-a664-1fc2db43d92e"/>
 				<textElement textAlignment="Center">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[AVENIDA TROPICAL SN
-JARDIM TROPICAL SN - 65905315
-IMPERATRIZ - MA]]></text>
+				<text><![CDATA[JOSE PEREIRA COSTA BOX 07 593 BOX
+CENTRO - 68537000
+CANAA DOS CARAJAS - PA]]></text>
 			</staticText>
 			<line>
 				<reportElement x="0" y="33" width="216" height="1" uuid="ced2c44a-1757-408e-a2ed-8645a02a8c2c"/>
@@ -147,15 +147,15 @@ IMPERATRIZ - MA]]></text>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[CNPJ: 06.692.107/0001-24  IE:121024946
-Rod. BR 010 Km 01 sn]]></text>
+				<text><![CDATA[CNPJ: 04.598.286/0001-00  IE:152249443
+RUA RAIMUNDO VERIDIANO CARDOSO 03]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="77" y="62" width="66" height="13" uuid="a1d448ba-4785-4095-9d33-13f185627324"/>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[MARANHAO NOVO
+				<text><![CDATA[BELA VISTA
 ]]></text>
 			</staticText>
 			<staticText>
@@ -163,8 +163,8 @@ Rod. BR 010 Km 01 sn]]></text>
 				<textElement textAlignment="Center" markup="html">
 					<font fontName="Courier New" size="7" isBold="false"/>
 				</textElement>
-				<text><![CDATA[IMPERATRIZ - MA
-SAC: 08008870874]]></text>
+				<text><![CDATA[TUCURUI - PA
+SAC: 9935230560]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="-1" y="86" width="220" height="12" uuid="5197e091-92ed-4de0-9d4c-6d03ea4405e5"/>
